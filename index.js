@@ -67,7 +67,13 @@ function addReview(array, name, rating, feedback){
 }
 console.log(reviews, 'Elizabeth', 5, 'Nice place.');
 
-/* Task 6: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+/* Task 6: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"*/
+
+function changeReview(arr, index, feedback){
+  arr[index].feedback = feedback;
+  return arr;
+}
+console.log(changeReview(reviews, 7, "This place is chill with really cool people, great for getting work done on weekdays."));
 
 /*  Task 7: Write a function to return a review based on the index of the review in the array.
 
