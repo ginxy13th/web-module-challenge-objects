@@ -13,8 +13,8 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 //   menuItem.category = `${category}`;
 //     console.log(menuItem);
 // }
-function createMenuItem(name, cost, category){
-  return {name, cost, category};
+function createMenuItem(name, price, category){
+  return {name, price, category};
 }
 // function creatMenuItem(name, price, category){
 //   return {name, price, category};
@@ -34,7 +34,6 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
-
   burger.discount = function(customer){
     if (customer === "teacher" || customer === "student"){
       return burger.price - burger.price * 0.25;
@@ -45,6 +44,7 @@ For example, burger.discount("teacher") would return 13.5 and burger.discount("p
 
 console.log(burger.discount("public"));
 console.log(burger.discount("teacher"));
+
 ///////////////Reviews (MVP)///////////////////
 
 const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
@@ -58,10 +58,14 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 ]
 
 /* Task 4: Console.log just Julius' feedback */
-
+console.log(reviews[5]);
 
 /* Task 5: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
-
+function addReview(array, name, rating, feedback){
+    array.push({name, rating, feedback});
+    return array;
+}
+console.log(reviews, 'Elizabeth', 5, 'Nice place.');
 
 /* Task 6: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
 
